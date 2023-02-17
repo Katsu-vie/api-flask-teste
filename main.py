@@ -13,6 +13,11 @@ from socket_config import socketio
 con = mysql.connect()
 cursor = con.cursor(pymysql.cursors.DictCursor)
 
+
+@app.route("/")
+def home():
+    return {"server": "server is running..!"}
+
 @app.route("/add-user", methods=["POST"])
 def add_user():
     try:
@@ -91,10 +96,7 @@ def teste():
 
     except Exception as e:
         print(" Error:: ", e)
-
-@app.route("/")
-def home():
-    return {"server": "server is running..!"}
+        
 
 @app.route("/get-users")
 def get_users():
@@ -119,5 +121,5 @@ def get_messages(id_sender, id_receptor):
 
 
 if __name__ == "__main__":
-    app.run( host="0.0.0.0", port=8000, debug=True )
+    app.run( host="0.0.0.0", port=5000, debug=True )
     #socketio.run(app)
