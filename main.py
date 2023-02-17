@@ -119,5 +119,5 @@ def get_messages(id_sender, id_receptor):
 
 
 if __name__ == "__main__":
-    app.run( port=8000 )
+    app.run( host="0.0.0.0", port=8000, debug=True )
     #socketio.run(app)
