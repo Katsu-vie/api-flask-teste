@@ -121,5 +121,5 @@ def get_messages(id_sender, id_receptor):
 
 
 if __name__ == "__main__":
-    app.run( host="0.0.0.0", port=5000, debug=True )
+    app.run( host="0.0.0.0", debug=True )
     #socketio.run(app)
