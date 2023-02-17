@@ -94,7 +94,7 @@ def teste():
 
 @app.route("/")
 def home():
-    return "home of api"
+    return {"server": "server is running..!"}
 
 @app.route("/get-users")
 def get_users():
