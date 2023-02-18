@@ -1,13 +1,12 @@
 import pymysql
-from flask import jsonify
 
-from flask import request
+from flask import request, jsonify, render_template
 from app import app
 from mysql_config import mysql
 from socket_config import socketio
 
-from flask_socketio import SocketIO
-socketio = SocketIO(app)
+# from flask_socketio import SocketIO
+# socketio = SocketIO(app)
 
 # tb_users id, name, password, email
 # con = mysql.connect()
@@ -16,7 +15,8 @@ socketio = SocketIO(app)
 
 @app.route("/")
 def home():
-    return {"server": "server is running..!"}
+    return render_template('teste.html')
+    # return {"server": "server is running..!"}
 
 # @app.route("/add-user", methods=["POST"])
 # def add_user():
