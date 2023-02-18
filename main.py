@@ -6,8 +6,8 @@ from app import app
 from mysql_config import mysql
 from socket_config import socketio
 
-#from flask_socketio import SocketIO
-#socketio = SocketIO(app)
+from flask_socketio import SocketIO
+socketio = SocketIO(app)
 
 # tb_users id, name, password, email
 # con = mysql.connect()
